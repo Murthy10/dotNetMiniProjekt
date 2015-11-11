@@ -1,0 +1,5 @@
+C:\Users\hsr\Desktop\Vorgabe\1.4_Strings\bin\Debug\1.4_Strings.exe
+C:\Users\hsr\Desktop\Vorgabe\1.4_Strings\bin\Debug\1.4_Strings.pdb
+C:\Users\hsr\Desktop\Vorgabe\1.4_Strings\obj\Debug\1.4_Strings.csprojResolveAssemblyReference.cache
+C:\Users\hsr\Desktop\Vorgabe\1.4_Strings\obj\Debug\1.4_Strings.exe
+C:\Users\hsr\Desktop\Vorgabe\1.4_Strings\obj\Debug\1.4_Strings.pdb
