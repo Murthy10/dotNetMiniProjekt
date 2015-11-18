@@ -5,14 +5,14 @@ namespace AutoReservation.BusinessLayer
 {
     public class AutoReservationBusinessComponent
     {
-        public void insert(Auto auto)
+        public void InsertAuto(Auto auto)
         {
             using(var context = new AutoReservationEntities()){
                 context.Auto.Add(auto);
             }
         }
 
-        public void update(Auto original, Auto modified)
+        public void UpdateAuto(Auto original, Auto modified)
         {
             using (var context = new AutoReservationEntities())
             {
@@ -21,7 +21,7 @@ namespace AutoReservation.BusinessLayer
             }
         }
 
-        public void delete(Auto auto)
+        public void DeleteAuto(Auto auto)
         {
             using (var context = new AutoReservationEntities())
             {
