@@ -11,9 +11,9 @@ namespace AutoReservation.Common.Interfaces
         KundeDto getKunde(int id);
         ReservationDto getReservation(int id);
 
-        void insertAuto(AutoDto auto);
-        void insertKunde(KundeDto kunde);
-        void insertReservation(ReservationDto reservation);
+        void createAuto(AutoDto auto);
+        void createKunde(KundeDto kunde);
+        void createReservation(ReservationDto reservation);
 
         void updateAuto(AutoDto original, AutoDto modified);
         void updateKunde(KundeDto original, KundeDto modified);
