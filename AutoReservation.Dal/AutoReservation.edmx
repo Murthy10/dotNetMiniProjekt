@@ -101,9 +101,9 @@
         </EntityType>
         <EntityType Name="Reservation">
           <Key>
-            <PropertyRef Name="Id" />
+            <PropertyRef Name="ReservationNr" />
           </Key>
-          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ReservationNr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="AutoId" Type="Int32" Nullable="false" />
           <Property Name="KundeId" Type="Int32" Nullable="false" />
           <Property Name="Von" Type="DateTime" Nullable="false" Precision="3" />
@@ -206,7 +206,7 @@
           <EntitySetMapping Name="Reservation">
             <EntityTypeMapping TypeName="AutoReservationModel.Reservation">
               <MappingFragment StoreEntitySet="Reservation">
-                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ReservationNr" ColumnName="Id" />
                 <ScalarProperty Name="AutoId" ColumnName="AutoId" />
                 <ScalarProperty Name="KundeId" ColumnName="KundeId" />
                 <ScalarProperty Name="Von" ColumnName="Von" />
