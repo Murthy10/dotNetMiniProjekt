@@ -7,18 +7,18 @@ namespace AutoReservation.Common.DataTransferObjects
 {
     public class ReservationDto: DtoBase<ReservationDto>
     {
-        private int reservationsNr;
-        public int ReservationsNr
+        private int reservationNr;
+        public int ReservationNr
         {
-            get { return reservationsNr; }
+            get { return reservationNr; }
             set
             {
-                if (reservationsNr == value)
+                if (reservationNr == value)
                 {
                     return;
                 }
-                reservationsNr = value;
-                this.OnPropertyChanged(p => p.ReservationsNr);
+                reservationNr = value;
+                this.OnPropertyChanged(p => p.ReservationNr);
             }
         }
 

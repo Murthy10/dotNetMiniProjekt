@@ -16,37 +16,37 @@ namespace AutoReservation.Service.Wcf
             Console.WriteLine("Calling: " + new StackTrace().GetFrame(1).GetMethod().Name);
         }
 
-        public void createAuto(AutoDto auto)
+        public void CreateAuto(AutoDto auto)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void createKunde(KundeDto kunde)
+        public void CreateKunde(KundeDto kunde)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void createReservation(ReservationDto reservation)
+        public void CreateReservation(ReservationDto reservation)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void deleteAuto(AutoDto auto)
+        public void DeleteAuto(AutoDto auto)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void deleteKunde(KundeDto kunde)
+        public void DeleteKunde(KundeDto kunde)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void deleteReservation(ReservationDto reservation)
+        public void DeleteReservation(ReservationDto reservation)
         {
             WriteActualMethod();
             throw new NotImplementedException();
@@ -88,19 +88,19 @@ namespace AutoReservation.Service.Wcf
             throw new NotImplementedException();
         }
 
-        public void updateAuto(AutoDto original, AutoDto modified)
+        public void UpdateAuto(AutoDto original, AutoDto modified)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void updateKunde(KundeDto original, KundeDto modified)
+        public void UpdateKunde(KundeDto original, KundeDto modified)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void updateReservation(ReservationDto original, ReservationDto modified)
+        public void UpdateReservation(ReservationDto original, ReservationDto modified)
         {
             WriteActualMethod();
             throw new NotImplementedException();

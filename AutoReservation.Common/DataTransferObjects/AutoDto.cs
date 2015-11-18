@@ -35,8 +35,8 @@ namespace AutoReservation.Common.DataTransferObjects
             }
         }
 
-        private float tagestarif;
-        public float Tagestarif
+        private int tagestarif;
+        public int Tagestarif
         {
             get { return tagestarif; }
             set
@@ -50,8 +50,8 @@ namespace AutoReservation.Common.DataTransferObjects
             }
         }
 
-        private float basistarif;
-        public float Basistarif
+        private int basistarif;
+        public int Basistarif
         {
             get { return basistarif; }
             set
