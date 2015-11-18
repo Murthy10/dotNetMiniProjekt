@@ -16,19 +16,19 @@ namespace AutoReservation.Service.Wcf
             Console.WriteLine("Calling: " + new StackTrace().GetFrame(1).GetMethod().Name);
         }
 
-        public void CreateAuto(AutoDto auto)
+        public void InsertAuto(AutoDto auto)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void CreateKunde(KundeDto kunde)
+        public void InsertKunde(KundeDto kunde)
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public void CreateReservation(ReservationDto reservation)
+        public void InsertReservation(ReservationDto reservation)
         {
             WriteActualMethod();
             throw new NotImplementedException();
@@ -52,19 +52,19 @@ namespace AutoReservation.Service.Wcf
             throw new NotImplementedException();
         }
 
-        public List<AutoDto> getAllAutos()
+        public List<AutoDto> Autos()
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public List<KundeDto> getAllKunden()
+        public List<KundeDto> Kunden()
         {
             WriteActualMethod();
             throw new NotImplementedException();
         }
 
-        public List<ReservationDto> getAllReservationen()
+        public List<ReservationDto> Reservationen()
         {
             WriteActualMethod();
             throw new NotImplementedException();

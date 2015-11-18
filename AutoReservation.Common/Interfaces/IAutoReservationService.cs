@@ -4,16 +4,16 @@ namespace AutoReservation.Common.Interfaces
     public interface IAutoReservationService
     {
         System.Collections.Generic.List<AutoDto> Autos();
-        System.Collections.Generic.List<KundeDto> getAllKunden();
-        System.Collections.Generic.List<ReservationDto> getAllReservationen();
+        System.Collections.Generic.List<KundeDto> Kunden();
+        System.Collections.Generic.List<ReservationDto> Reservationen();
 
         AutoDto getAuto(int id);
         KundeDto getKunde(int id);
         ReservationDto getReservation(int id);
 
-        void CreateAuto(AutoDto auto);
-        void CreateKunde(KundeDto kunde);
-        void CreateReservation(ReservationDto reservation);
+        void InsertAuto(AutoDto auto);
+        void InsertKunde(KundeDto kunde);
+        void InsertReservation(ReservationDto reservation);
 
         void UpdateAuto(AutoDto original, AutoDto modified);
         void UpdateKunde(KundeDto original, KundeDto modified);
