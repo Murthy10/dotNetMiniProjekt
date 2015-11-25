@@ -64,7 +64,13 @@ namespace AutoReservation.Service.Wcf.Testing
         [TestMethod]
         public void Test_InsertAuto()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var auto = new AutoDto();
+            auto.Marke = "Yolo";
+            auto.Tagestarif = 5;
+            auto.Basistarif = 10;
+            auto.AutoKlasse = AutoKlasse.Luxusklasse;
+            Target.InsertAuto(auto);
+            Assert.IsNotNull(auto.Id);
         }
 
         [TestMethod]
