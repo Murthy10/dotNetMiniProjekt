@@ -64,25 +64,42 @@ namespace AutoReservation.Service.Wcf.Testing
         [TestMethod]
         public void Test_InsertAuto()
         {
+            var countOld = Target.Autos().Count;
             var auto = new AutoDto();
             auto.Marke = "Yolo";
             auto.Tagestarif = 5;
             auto.Basistarif = 10;
             auto.AutoKlasse = AutoKlasse.Luxusklasse;
             Target.InsertAuto(auto);
-            Assert.IsNotNull(auto.Id);
+            var countNew = Target.Autos().Count;
+            Assert.AreEqual(countOld + 1, countNew);
         }
 
         [TestMethod]
         public void Test_InsertKunde()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var countOld = Target.Kunden().Count;
+            var kunde = new KundeDto();
+            kunde.Nachname = "yolo";
+            kunde.Vorname = "Heiri";
+            kunde.Geburtsdatum = DateTime.Now;
+            Target.InsertKunde(kunde);
+            var countNew = Target.Kunden().Count;
+            Assert.AreEqual(countOld + 1, countNew);
         }
 
         [TestMethod]
         public void Test_InsertReservation()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var countOld = Target.Reservationen().Count;
+            var res = new ReservationDto();
+            res.Auto = Target.getAuto(1);
+            res.Kunde = Target.getKunde(1);
+            res.Bis = DateTime.Now;
+            res.Von = DateTime.Now;
+            Target.InsertReservation(res);
+            var countNew = Target.Reservationen().Count;
+            Assert.AreEqual(countOld + 1, countNew);
         }
 
         [TestMethod]

@@ -61,37 +61,60 @@ namespace AutoReservation.Service.Wcf
         public List<AutoDto> Autos()
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            return db.GetAllAutos().ConvertToDtos();
         }
 
         public List<KundeDto> Kunden()
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            return db.GetAllKunden().ConvertToDtos();
         }
 
         public List<ReservationDto> Reservationen()
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            return db.GetAllReservations().ConvertToDtos();
         }
 
         public AutoDto getAuto(int id)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var autos = db.GetAllAutos();
+            foreach (Dal.Auto auto in autos){
+                if(auto.Id == id)
+                {
+                    return auto.ConvertToDto();
+                }
+            }
+            return null;
         }
 
         public KundeDto getKunde(int id)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var kunden = db.GetAllKunden();
+            foreach (Dal.Kunde kunde in kunden)
+            {
+                if (kunde.Id == id)
+                {
+                    return kunde.ConvertToDto();
+                }
+            }
+            return null;
         }
 
         public ReservationDto getReservation(int id)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var reserv = db.GetAllReservations();
+            foreach (Dal.Reservation res in reserv)
+            {
+                if (res.ReservationNr == id)
+                {
+                    return res.ConvertToDto();
+                }
+            }
+            return null;
         }
 
         public void UpdateAuto(AutoDto original, AutoDto modified)

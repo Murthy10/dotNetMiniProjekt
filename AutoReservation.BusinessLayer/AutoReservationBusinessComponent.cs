@@ -1,6 +1,7 @@
 ﻿using AutoReservation.Dal;
 using System.Linq;
 using System.Collections.Generic;
+using System.Data.Entity;
 
 namespace AutoReservation.BusinessLayer
 
@@ -9,8 +10,10 @@ namespace AutoReservation.BusinessLayer
     {
         public void InsertAuto(Auto auto)
         {
-            using(var context = new AutoReservationEntities()){
+            using (var context = new AutoReservationEntities())
+            {
                 context.Auto.Add(auto);
+                context.SaveChanges();
             }
         }
 
@@ -20,6 +23,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Auto.Attach(original);
                 context.Entry(original).CurrentValues.SetValues(modified);
+                context.SaveChanges();
             }
         }
 
@@ -29,6 +33,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Auto.Attach(auto);
                 context.Auto.Remove(auto);
+                context.SaveChanges();
             }
         }
 
@@ -37,6 +42,7 @@ namespace AutoReservation.BusinessLayer
             using (var context = new AutoReservationEntities())
             {
                 context.Kunde.Add(kunde);
+                context.SaveChanges();
             }
         }
 
@@ -46,6 +52,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Kunde.Attach(original);
                 context.Entry(original).CurrentValues.SetValues(modified);
+                context.SaveChanges();
             }
         }
 
@@ -55,6 +62,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Kunde.Attach(kunde);
                 context.Kunde.Remove(kunde);
+                context.SaveChanges();
             }
         }
 
@@ -63,6 +71,7 @@ namespace AutoReservation.BusinessLayer
             using (var context = new AutoReservationEntities())
             {
                 context.Reservation.Add(reservation);
+                context.SaveChanges();
             }
         }
 
@@ -72,6 +81,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Reservation.Attach(original);
                 context.Entry(original).CurrentValues.SetValues(modified);
+                context.SaveChanges();
             }
         }
 
@@ -81,6 +91,7 @@ namespace AutoReservation.BusinessLayer
             {
                 context.Reservation.Attach(reservation);
                 context.Reservation.Remove(reservation);
+                context.SaveChanges();
             }
         }
 
@@ -104,7 +115,8 @@ namespace AutoReservation.BusinessLayer
         {
             using (var context = new AutoReservationEntities())
             {
-                return context.Reservation.ToList();
+                
+                return context.Reservation.Include(r => r.Auto).Include(r => r.Kunde).ToList();
             }
         }
 
