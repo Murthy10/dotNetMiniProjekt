@@ -19,12 +19,15 @@ namespace AutoReservation.Service.Wcf
         public void InsertAuto(AutoDto auto)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbAuto = auto.ConvertToEntity();
+            db.InsertAuto(dbAuto);
         }
 
         public void InsertKunde(KundeDto kunde)
         {
             WriteActualMethod();
+            var dbKunde = kunde.ConvertToEntity();
+            
             throw new NotImplementedException();
         }
 
