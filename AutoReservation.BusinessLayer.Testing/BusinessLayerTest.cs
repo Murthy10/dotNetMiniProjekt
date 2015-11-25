@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AutoReservation.BusinessLayer;
 using AutoReservation.Dal;
+using AutoReservation.Common;
 
 namespace AutoReservation.BusinessLayer.Testing
 {
