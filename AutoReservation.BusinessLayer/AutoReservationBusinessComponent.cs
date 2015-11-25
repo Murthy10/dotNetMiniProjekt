@@ -1,4 +1,6 @@
 ﻿using AutoReservation.Dal;
+using System.Linq;
+using System.Collections.Generic;
 
 namespace AutoReservation.BusinessLayer
 
@@ -81,6 +83,31 @@ namespace AutoReservation.BusinessLayer
                 context.Reservation.Remove(reservation);
             }
         }
+
+        public List<Auto> GetAllAutos()
+        {
+            using (var context = new AutoReservationEntities())
+            {
+                return context.Auto.ToList();
+            }
+        }
+
+        public List<Kunde> GetAllKunden()
+        {
+            using (var context = new AutoReservationEntities())
+            {
+                return context.Kunde.ToList();
+            }
+        }
+
+        public List<Reservation> GetAllReservations()
+        {
+            using (var context = new AutoReservationEntities())
+            {
+                return context.Reservation.ToList();
+            }
+        }
+
 
 
         private static void HandleDbConcurrencyException<T>(AutoReservationEntities context, T original) where T : class
