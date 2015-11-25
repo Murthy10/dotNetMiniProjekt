@@ -1,5 +1,7 @@
 ﻿using AutoReservation.TestEnvironment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AutoReservation.BusinessLayer;
+using AutoReservation.Dal;
 
 namespace AutoReservation.BusinessLayer.Testing
 {
@@ -28,7 +30,11 @@ namespace AutoReservation.BusinessLayer.Testing
         
         [TestMethod]
         public void Test_UpdateAuto()
-        {
+        {   
+            
+            AutoReservationBusinessComponent arvc = new AutoReservationBusinessComponent();
+            Auto auto = new Auto();
+            arvc.UpdateAuto(Auto original, Auto modified)
             Assert.Inconclusive("Test not implemented.");
         }
 
