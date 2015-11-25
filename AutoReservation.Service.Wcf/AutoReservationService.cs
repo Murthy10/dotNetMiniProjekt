@@ -27,32 +27,35 @@ namespace AutoReservation.Service.Wcf
         {
             WriteActualMethod();
             var dbKunde = kunde.ConvertToEntity();
-            
-            throw new NotImplementedException();
+            db.InsertKunde(dbKunde);
         }
 
         public void InsertReservation(ReservationDto reservation)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbReservation = reservation.ConvertToEntity();
+            db.InsertReservation(dbReservation);
         }
 
         public void DeleteAuto(AutoDto auto)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbAuto = auto.ConvertToEntity();
+            db.DeleteAuto(dbAuto);
         }
 
         public void DeleteKunde(KundeDto kunde)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbKunde = kunde.ConvertToEntity();
+            db.DeleteKunde(dbKunde);
         }
 
         public void DeleteReservation(ReservationDto reservation)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbResevation = reservation.ConvertToEntity();
+            db.DeleteReservation(dbResevation);
         }
 
         public List<AutoDto> Autos()
@@ -94,19 +97,25 @@ namespace AutoReservation.Service.Wcf
         public void UpdateAuto(AutoDto original, AutoDto modified)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbOrginal = original.ConvertToEntity();
+            var dbModified = modified.ConvertToEntity();
+            db.UpdateAuto(dbOrginal, dbModified);
         }
 
         public void UpdateKunde(KundeDto original, KundeDto modified)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbOrginal = original.ConvertToEntity();
+            var dbModified = modified.ConvertToEntity();
+            db.UpdateKunde(dbOrginal, dbModified);
         }
 
         public void UpdateReservation(ReservationDto original, ReservationDto modified)
         {
             WriteActualMethod();
-            throw new NotImplementedException();
+            var dbOrginal = original.ConvertToEntity();
+            var dbModified = modified.ConvertToEntity();
+            db.UpdateReservation(dbOrginal, dbModified);
         }
     }
 }
