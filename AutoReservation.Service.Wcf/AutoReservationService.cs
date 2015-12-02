@@ -4,6 +4,7 @@ using System.Diagnostics;
 using AutoReservation.Common.DataTransferObjects;
 using System.Collections.Generic;
 using AutoReservation.BusinessLayer;
+using System.ServiceModel;
 
 
 namespace AutoReservation.Service.Wcf
@@ -119,10 +120,18 @@ namespace AutoReservation.Service.Wcf
 
         public void UpdateAuto(AutoDto original, AutoDto modified)
         {
+            
             WriteActualMethod();
             var dbOrginal = original.ConvertToEntity();
             var dbModified = modified.ConvertToEntity();
-            db.UpdateAuto(dbOrginal, dbModified);
+            try
+            {
+                db.UpdateAuto(dbOrginal, dbModified);
+            } catch(Exception e)
+            {
+                throw new FaultException<AutoDto>(original);
+            }
+            
         }
 
         public void UpdateKunde(KundeDto original, KundeDto modified)
@@ -130,7 +139,13 @@ namespace AutoReservation.Service.Wcf
             WriteActualMethod();
             var dbOrginal = original.ConvertToEntity();
             var dbModified = modified.ConvertToEntity();
-            db.UpdateKunde(dbOrginal, dbModified);
+            
+            try{
+                db.UpdateKunde(dbOrginal, dbModified);
+            } catch (Exception e)
+            {
+                throw new FaultException<KundeDto>(original);
+            }
         }
 
         public void UpdateReservation(ReservationDto original, ReservationDto modified)
@@ -138,7 +153,16 @@ namespace AutoReservation.Service.Wcf
             WriteActualMethod();
             var dbOrginal = original.ConvertToEntity();
             var dbModified = modified.ConvertToEntity();
-            db.UpdateReservation(dbOrginal, dbModified);
+            
+
+            try
+            {
+                db.UpdateReservation(dbOrginal, dbModified);
+            }
+            catch (Exception e)
+            {
+                throw new FaultException<ReservationDto>(original);
+            }
         }
     }
 }

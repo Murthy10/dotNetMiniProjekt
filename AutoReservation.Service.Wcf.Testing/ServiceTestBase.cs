@@ -151,21 +151,44 @@ namespace AutoReservation.Service.Wcf.Testing
         [ExpectedException(typeof(FaultException<AutoDto>))]
         public void Test_UpdateAutoWithOptimisticConcurrency()
         {
-            Assert.Inconclusive("Test not implemented.");
+
+                Random rnd = new Random();
+                var newname = "yoloHashtagSwag" + rnd.Next(9999);
+                var old = Target.getAuto(1);
+                var neu = old.Clone();
+                neu.Marke = newname;
+                Target.UpdateAuto(old, neu);
+                neu.Marke = "yolo2";
+                Target.UpdateAuto(old, neu);
+
+
         }
 
         [TestMethod]
         [ExpectedException(typeof(FaultException<KundeDto>))]
         public void Test_UpdateKundeWithOptimisticConcurrency()
         {
-            Assert.Inconclusive("Test not implemented.");
+            Random rnd = new Random();
+            var newname = "yoloHashtagSwag" + rnd.Next(9999);
+            var old = Target.getKunde(1);
+            var neu = old.Clone();
+            neu.Nachname = newname;
+            Target.UpdateKunde(old, neu);
+            neu.Nachname = "yolo";
+            Target.UpdateKunde(old, neu);
         }
 
         [TestMethod]
         [ExpectedException(typeof(FaultException<ReservationDto>))]
         public void Test_UpdateReservationWithOptimisticConcurrency()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var newname = DateTime.Now;
+            var old = Target.getReservation(2);
+            var neu = old.Clone();
+            neu.Bis = newname;
+            Target.UpdateReservation(old, neu);
+            neu.Bis = DateTime.Now;
+            Target.UpdateReservation(old, neu);
         }
 
         [TestMethod]
