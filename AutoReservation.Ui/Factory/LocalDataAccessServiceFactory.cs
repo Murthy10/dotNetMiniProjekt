@@ -8,7 +8,7 @@ using AutoReservation.Service.Wcf;
 
 namespace AutoReservation.Ui.Factory
 {
-    class LocalDataAccessServiceFactory : IServiceFactory
+    public class LocalDataAccessServiceFactory : IServiceFactory
     {
         public IAutoReservationService GetService()
         {

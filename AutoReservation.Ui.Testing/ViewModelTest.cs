@@ -25,7 +25,6 @@ namespace AutoReservation.Ui.Testing
         {
             AutoViewModel vm = new AutoViewModel(kernel.Get<IServiceFactory>());
             vm.Init();
-
             Assert.Inconclusive("Test not implemented.");
         }
 
