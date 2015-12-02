@@ -3,7 +3,7 @@ using Ninject.Modules;
 
 namespace AutoReservation.Ui
 {
-    public class AutoReservationModule : NinjectModule
+    public class AutoReservationServiceModule : NinjectModule
     {
         public override void Load()
         {

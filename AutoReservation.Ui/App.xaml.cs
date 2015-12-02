@@ -26,7 +26,7 @@ namespace AutoReservation.Ui
 
         private IKernel LoadNinject()
         {
-            var kernel = new StandardKernel(new AutoReservationModule());
+            var kernel = new StandardKernel(new AutoReservationServiceModule());
             kernel.Load("Dependencies.Ninject.xml");
             return kernel;
         }
