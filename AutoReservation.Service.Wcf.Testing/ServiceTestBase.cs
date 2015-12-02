@@ -105,19 +105,39 @@ namespace AutoReservation.Service.Wcf.Testing
         [TestMethod]
         public void Test_UpdateAuto()
         {
-            Assert.Inconclusive("Test not implemented.");
+            Random rnd = new Random();
+            var newname = "yoloHashtagSwag" + rnd.Next(9999);
+            var old = Target.getAuto(1);
+            var neu = old.Clone();
+            neu.Marke = newname;
+            Target.UpdateAuto(old, neu);
+            var updated = Target.getAuto(1);
+            Assert.AreEqual(newname, updated.Marke);
         }
 
         [TestMethod]
         public void Test_UpdateKunde()
         {
-            Assert.Inconclusive("Test not implemented.");
+            Random rnd = new Random();
+            var newname = "yoloHashtagSwag" + rnd.Next(9999);
+            var old = Target.getKunde(1);
+            var neu = old.Clone();
+            neu.Nachname = newname;
+            Target.UpdateKunde(old, neu);
+            var updated = Target.getKunde(1);
+            Assert.AreEqual(newname, updated.Nachname);
         }
 
         [TestMethod]
         public void Test_UpdateReservation()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var newname = DateTime.Now;
+            var old = Target.getReservation(2);
+            var neu = old.Clone();
+            neu.Bis = newname;
+            Target.UpdateReservation(old, neu);
+            var updated = Target.getReservation(2);
+            Assert.AreEqual(newname, updated.Bis);
         }
 
         [TestMethod]
