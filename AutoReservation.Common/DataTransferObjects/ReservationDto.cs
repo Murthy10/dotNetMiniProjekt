@@ -71,7 +71,7 @@ namespace AutoReservation.Common.DataTransferObjects
         private DateTime von;
         public DateTime Von
         {
-            get { return Von; }
+            get { return von; }
             set
             {
                 if (von == value)

@@ -1,4 +1,5 @@
-﻿using AutoReservation.TestEnvironment;
+﻿using System;
+using AutoReservation.TestEnvironment;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using AutoReservation.BusinessLayer;
 using AutoReservation.Dal;
@@ -31,7 +32,7 @@ namespace AutoReservation.BusinessLayer.Testing
         {
             TestEnvironmentHelper.InitializeTestData();
         }
-        
+
         [TestMethod]
         public void Test_UpdateAuto()
         {
@@ -63,10 +64,10 @@ namespace AutoReservation.BusinessLayer.Testing
             AutoReservationBusinessComponent arvc = new AutoReservationBusinessComponent();
             Reservation original = arvc.GetAllReservations()[0];
             Reservation modified = arvc.GetAllReservations()[0];
-            modified.Kunde.Vorname = "Skoda";
+            modified.Bis = new DateTime(2099, 12, 31);
             arvc.UpdateReservation(original, modified);
             Reservation newReservation = arvc.GetAllReservations()[0];
-            Assert.AreEqual("Skoda", newReservation.Kunde.Vorname);
+            Assert.AreEqual(new DateTime(2099, 12, 31), modified.Bis);
         }
     }
 }

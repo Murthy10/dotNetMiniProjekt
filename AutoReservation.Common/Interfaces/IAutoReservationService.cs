@@ -28,10 +28,13 @@ namespace AutoReservation.Common.Interfaces
         void InsertReservation(ReservationDto reservation);
 
         [OperationContract]
+        [FaultContract(typeof(AutoDto))]
         void UpdateAuto(AutoDto original, AutoDto modified);
         [OperationContract]
+        [FaultContract(typeof(KundeDto))]
         void UpdateKunde(KundeDto original, KundeDto modified);
         [OperationContract]
+        [FaultContract(typeof(ReservationDto))]
         void UpdateReservation(ReservationDto original, ReservationDto modified);
 
         [OperationContract]

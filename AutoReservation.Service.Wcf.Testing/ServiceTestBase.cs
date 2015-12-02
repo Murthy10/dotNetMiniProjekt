@@ -138,7 +138,7 @@ namespace AutoReservation.Service.Wcf.Testing
         [TestMethod]
         public void Test_UpdateReservation()
         {
-            var newname = DateTime.Now;
+            var newname = DateTime.Today;
             var old = Target.getReservation(2);
             var neu = old.Clone();
             neu.Bis = newname;
