@@ -49,11 +49,44 @@ namespace AutoReservation.Ui.ViewModels
             }
         }
 
-        protected override void Load()
+        private readonly ObservableCollection<AutoDto> autos = new ObservableCollection<AutoDto>();
+        public ObservableCollection<AutoDto> Autos
         {
-            
+            get { return autos; }
         }
 
+        protected override void Load()
+        {
+            Kunden.Clear();
+            kundenOriginal.Clear();
+
+            Kunden.Clear();
+            Autos.Clear();
+
+            foreach (ReservationDto reservation in Service.Reservationen())
+            {
+                Reservationen.Add(reservation);
+            }
+            foreach (AutoDto auto in Service.Autos())
+            {
+                Autos.Add(auto);
+            }
+            foreach (KundeDto kunde in Service.Kunden())
+            {
+                Kunden.Add(kunde);
+                kundenOriginal.Add((KundeDto)kunde.Clone());
+            }
+            SelectedKunde = Kunden.FirstOrDefault();
+        }
+
+        private readonly List<ReservationDto> reservationenOriginal = new List<ReservationDto>();
+        private readonly ObservableCollection<ReservationDto> reservationen = new ObservableCollection<ReservationDto>();
+
+
+        public ObservableCollection<ReservationDto> Reservationen
+        {
+            get { return reservationen; }
+        }
         private bool CanLoad()
         {
             return ServiceExists;
