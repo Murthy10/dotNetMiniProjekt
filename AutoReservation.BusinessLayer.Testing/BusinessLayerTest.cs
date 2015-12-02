@@ -31,11 +31,9 @@ namespace AutoReservation.BusinessLayer.Testing
         
         [TestMethod]
         public void Test_UpdateAuto()
-        {   
-            
+        {
             AutoReservationBusinessComponent arvc = new AutoReservationBusinessComponent();
-            Auto auto = new Auto();
-            arvc.UpdateAuto(Auto original, Auto modified)
+            //arvc.UpdateAuto(Auto original, Auto modified);
             Assert.Inconclusive("Test not implemented.");
         }
 
