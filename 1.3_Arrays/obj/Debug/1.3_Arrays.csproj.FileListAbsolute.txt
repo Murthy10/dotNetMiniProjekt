@@ -1,4 +1,0 @@
-C:\Users\hsr\Desktop\Vorgabe\1.3_Arrays\bin\Debug\1.3_Arrays.exe
-C:\Users\hsr\Desktop\Vorgabe\1.3_Arrays\bin\Debug\1.3_Arrays.pdb
-C:\Users\hsr\Desktop\Vorgabe\1.3_Arrays\obj\Debug\1.3_Arrays.exe
-C:\Users\hsr\Desktop\Vorgabe\1.3_Arrays\obj\Debug\1.3_Arrays.pdb

@@ -1,4 +1,0 @@
-C:\Users\hsr\Desktop\Vorgabe\1.6_Statements\bin\Debug\1.6_Statements.exe
-C:\Users\hsr\Desktop\Vorgabe\1.6_Statements\bin\Debug\1.6_Statements.pdb
-C:\Users\hsr\Desktop\Vorgabe\1.6_Statements\obj\Debug\1.6_Statements.exe
-C:\Users\hsr\Desktop\Vorgabe\1.6_Statements\obj\Debug\1.6_Statements.pdb

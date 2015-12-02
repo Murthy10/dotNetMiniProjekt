@@ -1,5 +1,0 @@
-C:\Users\hsr\Desktop\Vorgabe\1.2_Object\bin\Debug\1.2_Object.exe
-C:\Users\hsr\Desktop\Vorgabe\1.2_Object\bin\Debug\1.2_Object.pdb
-C:\Users\hsr\Desktop\Vorgabe\1.2_Object\obj\Debug\1.2_Object.csprojResolveAssemblyReference.cache
-C:\Users\hsr\Desktop\Vorgabe\1.2_Object\obj\Debug\1.2_Object.exe
-C:\Users\hsr\Desktop\Vorgabe\1.2_Object\obj\Debug\1.2_Object.pdb
