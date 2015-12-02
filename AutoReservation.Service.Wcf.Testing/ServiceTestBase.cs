@@ -22,43 +22,50 @@ namespace AutoReservation.Service.Wcf.Testing
         [TestMethod]
         public void Test_GetAutos()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var autos = Target.Autos();
+            Assert.IsTrue(autos.Count > 0);
         }
 
         [TestMethod]
         public void Test_GetKunden()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var kunden = Target.Kunden();
+            Assert.IsTrue(kunden.Count > 0);
         }
 
         [TestMethod]
         public void Test_GetReservationen()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var res = Target.Reservationen();
+            Assert.IsTrue(res.Count > 0);
         }
 
         [TestMethod]
         public void Test_GetAutoById()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var obj = Target.getAuto(1);
+            Assert.IsNotNull(obj);
         }
 
         [TestMethod]
         public void Test_GetKundeById()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var obj = Target.getKunde(1);
+            Assert.IsNotNull(obj);
         }
 
         [TestMethod]
         public void Test_GetReservationByNr()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var obj = Target.getReservation(1);
+            Assert.IsNotNull(obj);
         }
 
         [TestMethod]
         public void Test_GetReservationByIllegalNr()
         {
-            Assert.Inconclusive("Test not implemented.");
+            var obj = Target.getReservation(12312312);
+            Assert.IsNull(obj);
         }
 
         [TestMethod]
